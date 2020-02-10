@@ -18,7 +18,8 @@ app.use(routes);
 const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/googleBooksSearch_db`;
 
 mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    seUnifiedTopology: true
 });
 
 app.listen(PORT, function () {
