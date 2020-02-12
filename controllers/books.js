@@ -26,7 +26,7 @@ module.exports = {
             )
     },
     create: function (req, res) {
-        console.log(`Here ${req.body}`);
+        console.log(`Here ${JSON.stringify(req.body, null, 2)}`);
         db.Book
             .create(req.body)
             .then(result =>

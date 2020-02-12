@@ -9,12 +9,12 @@ export default {
         });
     },
     getSavedBooks: function () {
-        return axios.get(`/api/saved`)
+        return axios.get(`/api/books/`)
     },
     deleteBook: function (id) {
-        return axios.delete(`/api/books ${id}`)
+        return axios.delete(`/api/books/${id}`)
     },
     saveABook: function (data) {
-        return axios.post(`/api/books`, data)
+        return axios.post(`/api/books/`, data)
     }
 };

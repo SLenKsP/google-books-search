@@ -1,14 +1,9 @@
 import React from "react";
 
-export const List = ({ child }) => {
-    return (
-        <ul className="list-group">
-            { child }
-        </ul>
-    )
+export const List = ({ children }) => {
+  return <ul className="list-group">{children}</ul>;
 };
 
-export function ListItem ({ child }) {
-    return <li className="list-group-item" >{ child }</li>
-};
-
+export function ListItem({ children }) {
+  return <li className="list-group-item">{children}</li>;
+}

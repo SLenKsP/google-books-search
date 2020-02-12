@@ -18,6 +18,7 @@ class Saved extends Component {
 
     getSavedBooks = () => {
         API.getSavedBooks().then(res => {
+            console.log(res);
             this.setState({
                 books: res.data
             });
@@ -27,7 +28,7 @@ class Saved extends Component {
     handleBookDelete = id => {
         API.deleteBook(id).then(res => { this.getSavedBooks() });
     };
-    render () {
+    render() {
         return (
             <Container>
                 <Row>
@@ -47,10 +48,10 @@ class Saved extends Component {
                                 <List>
                                     { this.state.books.map(book => (
                                         <Book
-                                            key={ book._id }
+                                            key={ book.id }
                                             title={ book.title }
                                             subtitle={ book.subtitle }
-                                            link={ book.link }
+                                            link={ book.url_link }
                                             authors={ book.authors.join(", ") }
                                             description={ book.description }
                                             image={ book.image }

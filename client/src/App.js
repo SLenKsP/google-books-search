@@ -11,9 +11,10 @@ function App () {
       <div>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route component={ NoMatchFoundData } />
+          <Route exact path="/" component={Home} />
           <Route exact path="/saved" component={ Saved } />
+          <Route component={ NoMatchFoundData } />
+          
         </Switch>
       </div>
     </Router>
