@@ -7,10 +7,8 @@ router.use(`/books`, booksRoute);
 
 router.use(`/google`, googleRoute);
 
-router.use(
-    function (req, res) {
-        res.sendFile(path.join(__dirname, `../../client/public/index.html`));
-    }
-);
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, `../../client/build/index.html`));
+});
 
 module.exports = router;
